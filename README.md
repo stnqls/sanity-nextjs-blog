@@ -18,3 +18,9 @@ Fetch data on each request
 ```
 npm i @sanity/client
 ```
+
+# Sanity Content 사용하기
+
+```
+npm i @sanity/block-content-to-react
+```

@@ -29,7 +29,7 @@ export default function BlogPostDetail({ blocks }) {
       <Col span={24}>
         <SanityBlockContent
           blocks={blocks}
-          projectId="n9hizezu"
+          projectId={process.env.projectId}
           dataset="production"
           serializers={serializers}
         />

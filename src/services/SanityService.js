@@ -2,7 +2,7 @@ import { createClient } from "@sanity/client";
 
 export default class SanityService {
   _client = createClient({
-    projectId: "n9hizezu",
+    projectId: process.env.projectId,
     dataset: "production",
     useCdn: process.env.NODE_ENV === "production",
   });
