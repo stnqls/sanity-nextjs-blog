@@ -24,7 +24,9 @@ const serializers = {
       return <img src={urlFor(image).width(650).url()} />;
     },
     video: ({ node }) => {
-      return <p>video</p>;
+      const video = node.href;
+      console.log(video);
+      return <video src={video}>{node.caption}</video>;
     },
     link: ({ node }) => {
       const { metadata } = node;
