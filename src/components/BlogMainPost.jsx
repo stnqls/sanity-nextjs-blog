@@ -13,8 +13,7 @@ export default function BlogMainPost({
   return (
     <Row align="middle" style={{ height: "auto" }}>
       <Col span={24}>
-        <Link href={`/post${slug}`} />
-        <a href="">
+        <Link href={`/post/${slug}`}>
           <Card
             style={{
               border: "none",
@@ -40,7 +39,7 @@ export default function BlogMainPost({
               <h4>date : {dayjs(createdAt).format("YYYY MMMM D")}</h4>
             </div>
           </Card>
-        </a>
+        </Link>
       </Col>
     </Row>
   );
