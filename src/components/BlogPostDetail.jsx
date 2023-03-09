@@ -1,6 +1,8 @@
 import { Col, Row } from "antd";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import SyntaxHighlightet from "react-syntax-highlighter";
+import imageUrlBuilder from "@sanity/image-url";
+import SanityClient from "@sanity/client";
 
 const serializers = {
   types: {
@@ -9,6 +11,17 @@ const serializers = {
       return (
         <SyntaxHighlightet language="javascript">{code}</SyntaxHighlightet>
       );
+    },
+    image: ({ node }) => {
+      const image = node.asset._ref;
+      const builder = imageUrlBuilder({
+        projectId: process.env.projectId,
+        dataset: "production",
+      });
+      function urlFor(source) {
+        return builder.image(source);
+      }
+      return <img src={urlFor(image).width(650).url()} />;
     },
     video: ({ node }) => {
       return <p>video</p>;
@@ -24,8 +37,9 @@ const serializers = {
 };
 
 export default function BlogPostDetail({ blocks }) {
+  console.log(blocks);
   return (
-    <Row>
+    <Row style={{ padding: "20px" }}>
       <Col span={24}>
         <SanityBlockContent
           blocks={blocks}

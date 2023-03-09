@@ -16,14 +16,29 @@ export default function BlogMainPost({
         <Link href={`/post${slug}`} />
         <a href="">
           <Card
-            style={{ border: "none" }}
-            cover={<img alt={thumbnail.alt} src={thumbnail.imageUrl} />}
+            style={{
+              border: "none",
+              display: "flex",
+            }}
+            cover={
+              <img
+                alt={thumbnail.alt}
+                src={thumbnail.imageUrl}
+                style={{
+                  width: "300px",
+                  height: "300px",
+                  overflow: "hidden",
+                  borderRadius: "8px",
+                }}
+              />
+            }
           >
-            <h1>Title : {title}</h1>
-            <h3>SubTitle : {subtitle}</h3>
-            <h4>
-              Author : {author.name}({dayjs(createdAt).format("YYYY MMMM D")})
-            </h4>
+            <div style={{ paddingLeft: "24px" }}>
+              <h1>Title : {title}</h1>
+              <h3>SubTitle : {subtitle}</h3>
+              <h4>Author : {author.name}</h4>
+              <h4>date : {dayjs(createdAt).format("YYYY MMMM D")}</h4>
+            </div>
           </Card>
         </a>
       </Col>

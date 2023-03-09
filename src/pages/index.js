@@ -9,8 +9,6 @@ import styles from "../styles/Home.module.css";
 export default function Home({ home, posts }) {
   const mainPost = posts.find((p) => p.slug === home.mainPostUrl);
   const otherPosts = posts.filter((p) => p.slug !== home.mainPostUrl);
-  console.log(mainPost);
-  console.log(otherPosts);
 
   return (
     <div className={styles.container}>

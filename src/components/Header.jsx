@@ -6,12 +6,11 @@ export default function Header() {
   return (
     <Row align="middle" style={{ height: 64 }}>
       <Col span={24}>
-        <Link href="/" />
-        <a>
+        <Link href="/">
           <div style={{ fontSize: 20 }}>
             <CodeOutlined /> Subin blog
           </div>
-        </a>
+        </Link>
       </Col>
     </Row>
   );

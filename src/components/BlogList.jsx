@@ -16,16 +16,24 @@ export default function BlogList({ posts }) {
             <Col span={6} key={`post-${index}`}>
               <Link href={`/post/${post.slug}`}>
                 <Card
-                  style={{ width: "100%", border: "none", marginBottom: 30 }}
+                  style={{
+                    width: "100%",
+                    border: "none",
+                    marginBottom: 30,
+                  }}
                   cover={
                     <img
                       alt={post.thumbnail.alt}
                       src={post.thumbnail.imageUrl}
+                      style={{
+                        height: "250px",
+                        borderRadius: "8px",
+                      }}
                     />
                   }
                 >
-                  <h3>{post.title}</h3>
-                  <h4>
+                  <h3 style={{ margin: 0 }}>{post.title}</h3>
+                  <h4 style={{ color: "#333" }}>
                     {post.author.name} (
                     {dayjs(post.createdAp).format("MMMM D YYYY")})
                   </h4>
