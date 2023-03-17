@@ -3,6 +3,7 @@ import SanityBlockContent from "@sanity/block-content-to-react";
 import SyntaxHighlightet from "react-syntax-highlighter";
 import imageUrlBuilder from "@sanity/image-url";
 import SanityClient from "@sanity/client";
+import ImageGallery from "./ImageGallery";
 
 const serializers = {
   types: {
@@ -25,15 +26,20 @@ const serializers = {
     },
     video: ({ node }) => {
       const video = node.href;
-      console.log(video);
+      // console.log(video);
       return <video src={video}>{node.caption}</video>;
     },
     link: ({ node }) => {
       const { metadata } = node;
-      return <a href={metadata}>link</a>;
+      return (
+        <a href={metadata} style={{ fontSize: "18px" }}>
+          {node.name}
+        </a>
+      );
     },
     imageGallery: ({ node }) => {
-      return <p>imageGallery</p>;
+      const images = node.images;
+      return <ImageGallery images={images} />;
     },
   },
 };

@@ -35,7 +35,7 @@ export default function BlogList({ posts }) {
                   <h3 style={{ margin: 0 }}>{post.title}</h3>
                   <h4 style={{ color: "#333" }}>
                     {post.author.name} (
-                    {dayjs(post.createdAp).format("MMMM D YYYY")})
+                    {dayjs(post.createdAt).format("YYYY. MM. DD")})
                   </h4>
                 </Card>
               </Link>

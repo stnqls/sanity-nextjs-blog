@@ -6,7 +6,6 @@ import BlogPostDetail from "@/components/BlogPostDetail";
 import Footer from "@/components/Footer";
 
 export default function PostAll({ slug, post }) {
-  console.log(post);
   return (
     <div className={styles.container}>
       <Header />
