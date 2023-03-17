@@ -1,26 +1,11 @@
-## getStaticProps (Static Generation)
+# Sanity 블로그 만들기
 
-:Fetch data at build time
+sanity studio : https://my-blog-nextjs.sanity.studio/desk
 
-## getStaticPaths (Static Generation)
+sanity blog : https://sanity-nextjs-blog-sand.vercel.app/
 
-Specify dynamic routes to pre-render pages based on data
+여러 컨텐츠를 편리하게 관리할 수 있는 콘텐츠 관리 시스템을 사용해 Next.js 로 `Link`, `Image`, `Image Gallery`, `Code`의 기능을 추가 시켜 블로그를 만들었다.
 
-## getServerSideProps (Serverside Rendering)
+## 개발기간
 
-Fetch data on each request
-
-- Static Generation : 미리 모든 데이터를 정적페이지로 만들어, 파일 단위로 사용.
-- Serverside Rendering : 해당 페이지를 서버에서 만들어서 보여준다.
-
-# Sanity데이터 연결하기
-
-```
-npm i @sanity/client
-```
-
-# Sanity Content 사용하기
-
-```
-npm i @sanity/block-content-to-react
-```
+2023.01.19 ~ing

@@ -26,8 +26,9 @@ const serializers = {
     },
     video: ({ node }) => {
       const video = node.href;
-      // console.log(video);
-      return <video src={video}>{node.caption}</video>;
+      console.log(node);
+      return <video src="https://youtu.be/bDVAQZVeebw">{node.caption}</video>;
+      // return <video src={video}>{node.caption}</video>;
     },
     link: ({ node }) => {
       const { metadata } = node;
